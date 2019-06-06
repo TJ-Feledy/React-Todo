@@ -28,12 +28,26 @@ class TodoList extends React.Component {
     };
     newTask.id = Date.now();
 
+    
     this.setState({
       toDoArray: [...this.state.list, newTask]
     });
     toDoArray.push(newTask);
     this.setState({task: ''});
   };
+
+  toggleTask = id => {
+    const newTaskList = this.state.list.map(item => {
+      if (item.id === id) {
+        const newTaskObj = {...item, completed: !item.completed};
+        return newTaskObj;
+      }
+      else {
+        return item;
+      }
+    });
+    this.setState({list: newTaskList});
+  }
 
   render() {
     return (
