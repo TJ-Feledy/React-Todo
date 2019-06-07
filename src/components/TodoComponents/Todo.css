@@ -2,7 +2,35 @@ App {
   max-width: 550px;
 
 }
+h1 {
+  background-color: rgba(144, 238, 144,.8);
+  border: dashed 2px gray;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 140px;
+  font-style: oblique;
+  text-align: center;
+  padding: 5px;
+}
+
+.todaysDate {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.listContainer {
+  text-align: center;
+}
+
+body {
+  max-width: 550px;
+  background-image: url('https://previews.123rf.com/images/dmstudio/dmstudio1206/dmstudio120600023/14231339-clipboard-and-paper-isolated-on-white-background.jpg');
+  background-size: 550px;
+  background-repeat: no-repeat;
+}
 
 .completed {
-  text-decoration: line-through;
+  text-decoration: line-through rgb(255, 0, 0) wavy;
 }
