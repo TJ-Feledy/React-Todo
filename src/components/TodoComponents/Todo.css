@@ -37,10 +37,11 @@ h1 {
 
 body {
   max-width: 550px;
+  min-width: 550px;
   background-image: url('https://previews.123rf.com/images/dmstudio/dmstudio1206/dmstudio120600023/14231339-clipboard-and-paper-isolated-on-white-background.jpg');
   background-size: 550px;
   background-repeat: no-repeat;
-  background-position: 20% 0%;
+  background-position: 10px 0;
   margin: 10px;
 }
 
