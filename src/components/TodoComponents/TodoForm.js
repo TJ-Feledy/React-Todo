@@ -12,6 +12,7 @@ function TodoForm (props) {
           name='task'
         />
         <button type='submit'>Add Task</button>
+        <button type='button'>Clear Completed Tasks</button>
       </form>
     </div>
   ) 
