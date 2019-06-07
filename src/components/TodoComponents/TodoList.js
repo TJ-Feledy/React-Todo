@@ -72,7 +72,7 @@ class TodoList extends React.Component {
           submitHandler={this.submitHandler} 
           stateTask={this.state.task} 
           changeHandler={this.changeHandler}
-          onClick={this.clearCompleted}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     )
