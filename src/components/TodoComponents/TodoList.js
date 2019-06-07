@@ -19,6 +19,11 @@ class TodoList extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   };
 
+  clearCompleted = () => {
+    const clearedList = this.state.list.filter(item => item.completed === false);
+    this.setState({list: clearedList});
+  }
+
   submitHandler = event => {
     event.preventDefault();
     const newTask = {
@@ -67,6 +72,7 @@ class TodoList extends React.Component {
           submitHandler={this.submitHandler} 
           stateTask={this.state.task} 
           changeHandler={this.changeHandler}
+          onClick={this.clearCompleted}
         />
       </div>
     )

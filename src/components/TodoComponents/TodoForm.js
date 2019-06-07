@@ -12,7 +12,7 @@ function TodoForm (props) {
           name='task'
         />
         <button type='submit'>Add Task</button>
-        <button type='button'>Clear Completed Tasks</button>
+        <button className='clear' type='button' onClick={props.clearCompleted} >Clear Completed Tasks</button>
       </form>
     </div>
   ) 
