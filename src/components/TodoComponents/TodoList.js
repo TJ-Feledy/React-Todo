@@ -35,7 +35,7 @@ class TodoList extends React.Component {
 
     
     this.setState({
-      toDoArray: [...this.state.list, newTask]
+      list: [...this.state.list, newTask]
     });
     toDoArray.push(newTask);
     this.setState({task: ''});
