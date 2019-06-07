@@ -18,6 +18,8 @@ h1 {
   font-size: 30px;
   text-decoration: underline;
   margin-bottom: 10px;
+  font-family: 'Caveat', cursive;
+  font-weight: 900;
 }
 
 .listContainer {
@@ -28,7 +30,9 @@ h1 {
 .todoList {
   text-align: left;
   margin-left: 10%;
-  font-size: 18px;
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+  font-style: oblique;
 }
 
 body {
