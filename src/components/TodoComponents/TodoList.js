@@ -19,6 +19,11 @@ class TodoList extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   };
 
+  clearCompleted = () => {
+    const clearedList = this.state.list.filter(item => item.completed === false);
+    this.setState({list: clearedList});
+  }
+
   submitHandler = event => {
     event.preventDefault();
     const newTask = {
@@ -28,23 +33,47 @@ class TodoList extends React.Component {
     };
     newTask.id = Date.now();
 
+    
     this.setState({
-      toDoArray: [...this.state.list, newTask]
+      list: [...this.state.list, newTask]
     });
     toDoArray.push(newTask);
     this.setState({task: ''});
   };
 
+  toggleTask = id => {
+    const newTaskList = this.state.list.map(item => {
+      if (item.id === id) {
+        const newTaskObj = {...item, completed: !item.completed};
+        return newTaskObj;
+      }
+      else {
+        return item;
+      }
+    });
+    this.setState({list: newTaskList});
+  }
+
   render() {
     return (
-      <div>
+      <div className='listContainer'>
         <div className='todoList'>
           {this.state.list.map((item, index) => {
-            return <Todo item={item} key={index} taskId={item} />
+            return <Todo 
+              item={item} 
+              key={index} 
+              done={item} 
+              toggleTask={this.toggleTask}
+            />
           })
           }
         </div>
-        <TodoForm submitHandler={this.submitHandler} stateTask={this.state.task} changeHandler={this.changeHandler} />
+        <TodoForm 
+          submitHandler={this.submitHandler} 
+          stateTask={this.state.task} 
+          changeHandler={this.changeHandler}
+          clearCompleted={this.clearCompleted}
+        />
       </div>
     )
   }

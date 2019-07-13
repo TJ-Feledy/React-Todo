@@ -2,6 +2,8 @@ import React from 'react';
 import moment from 'moment';
 import TodoList from './components/TodoComponents/TodoList';
 
+import './components/TodoComponents/Todo.css';
+
 function App() {
  
   return (
